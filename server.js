@@ -8,7 +8,10 @@ require("dotenv").config();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://timely-florentine-e6af14.netlify.app"
+}));
+
 
 // Configure Multer for handling file uploads
 const storage = multer.diskStorage({
